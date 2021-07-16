@@ -14,6 +14,7 @@ font20 = ImageFont.truetype(os.path.join(fontsdir, 'Font.ttc'), 20)
 font18 = ImageFont.truetype(os.path.join(fontsdir, 'Font.ttc'), 18)
 
 LAST_IMAGE = None
+CURRENT_TEXT = None
 
 def Screen(is_mock):
     class ScreenR(Resource):
@@ -53,6 +54,8 @@ def Screen(is_mock):
             
             if not is_mock:
                 epd.display(epd.getbuffer(LBlackimage), epd.getbuffer(LRYimage))
+            
+            CURRENT_TEXT = message
             
             return { 'message': 'ok' }
     return ScreenR
