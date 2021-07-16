@@ -18,6 +18,9 @@ CURRENT_TEXT = None
 
 def Screen(is_mock):
     class ScreenR(Resource):
+        def get(self):
+            return CURRENT_TEXT
+
         def put(self):
             data = request.get_json(force=True)
             if 'text' not in data:
