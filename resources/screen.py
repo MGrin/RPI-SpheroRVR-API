@@ -53,12 +53,14 @@ def Screen(is_mock):
             LBlackimage = LBlackimage.rotate(180)
             LRYimage = LRYimage.rotate(180)
 
+            
+            global CURRENT_TEXT
+            global LAST_IMAGE
+            
             LAST_IMAGE = LBlackimage
             
             if not is_mock:
                 epd.display(epd.getbuffer(LBlackimage), epd.getbuffer(LRYimage))
-            
-            CURRENT_TEXT = message
-            
+                        
             return { 'message': 'ok' }
     return ScreenR
