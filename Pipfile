@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+aiohttp = "*"
+pyserial-asyncio = "*"
+pyserial = "*"
+flask = "*"
+flask-restful = "*"
+spidev = "*"
+rpi = "*"
+"rpi.gpio" = "*"
+image = "*"
+flask-cors = "*"
+picamera = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"
